@@ -1,0 +1,25 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script> 
+        function* fibonacci() {
+            let a = 1;
+            let b = 1;
+            while (true) {
+                const nextNumber = a + b;// albergo la suma de ambas numeros que sera el siguiente
+                a = b; // igualo a al anterior valor de b
+                b = nextNumber; // asigno a b el nuevo valor de nexxt o sea la suma
+                yield nextNumber;
+            }
+        }
+        const fibo = fibonacci();
+        fibo.next();
+        </script>
+</body>
+</html>
