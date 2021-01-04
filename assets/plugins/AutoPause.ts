@@ -1,4 +1,8 @@
+import  MediaPlayer from '../MediaPlayer'
 class AutoPause {
+    private threshold: number;
+    player: MediaPlayer; // Asigno el tipo player 
+    
     constructor() {
         this.threshold = 0.25;
         this.handleIntersection = this.handleIntersection.bind(this);//asignamos el contexto siempre a la instancia del objeto
@@ -16,7 +20,7 @@ class AutoPause {
     document.addEventListener("visibilitychange", this.handleVisibilityChange);
     }
      //metodo que realiza los cambios si es observado o no
-    handleIntersection(entries) { // al  inter-observer llamar a handle inter pedira una lista de entries con los objetos que observa
+    private handleIntersection(entries: IntersectionObserverEntry[]) { // al  inter-observer llamar a handle inter pedira una lista de entries con los objetos que observa
         const entry = entries[0]; // es el unico  entry por eso es el primero de la lista
         const isVisible = entry.intersectionRatio >= this.threshold;//vemos la intersccion que lleva para poder poner ponerlo en play o pause
         if (isVisible) {
@@ -26,18 +30,14 @@ class AutoPause {
         }
     } 
     //metodo que reacciona al cambio de tab
-    handleVisibilityChange() {
+   private handleVisibilityChange() {
         const isVisible = document.visibilityState === "visible";
         if (isVisible) {
             this.player.play();
         } else {
             this.player.pause();
-
         }
-        
     }
-
-
 }
 
 export default AutoPause;

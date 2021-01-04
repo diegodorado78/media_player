@@ -21,14 +21,15 @@ self.addEventListener('fetch', event => {
  async function precache() {
      const cache = await caches.open(VERSION);
      return cache.addAll([
-         '/',
-         '/index.html',
-         '/assets/index.js',
-         '/assets/MediaPlayer.js',
-         '/assets/plugins/AutoPlay.js',
-         '/assets/plugins/AutoPause.js',
-         '/assets/index.css',
-         '/assets/dua_lipa.mp4',
+         //EL PARCEL CREA LA CARPETA DIST ENTONCES LAS SIGUIENTES RUTAS ESTAN DEMAS
+        //  '/',
+        //  '/index.html',
+        //  '/assets/index.js'  ,
+        //  '/assets/MediaPlayer.js',
+        //  '/assets/plugins/AutoPlay.js',
+        //  '/assets/plugins/AutoPause.js',
+        //  '/assets/index.css',
+        //  '/assets/dua_lipa.mp4',
      ]);
  }
 
