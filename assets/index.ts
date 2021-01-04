@@ -1,9 +1,9 @@
-import MediaPlayer from './MediaPlayer.ts';
-import AutoPlay from './plugins/AutoPlay.ts';
-import AutoPause from './plugins/AutoPause.ts';
+import MediaPlayer from './MediaPlayer';
+import AutoPlay from './plugins/AutoPlay';
+import AutoPause from './plugins/AutoPause';
 
 //mdn html media element para ver props, metodos de los medios
-const video:HTMLMediaElement = document.querySelector("video");
+const video = document.querySelector("video");
 const btn_play:HTMLElement = document.querySelector("#btn_play");
 const btn_mute:HTMLElement  = document.querySelector("#btn_mute");
 
