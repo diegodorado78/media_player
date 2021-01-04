@@ -3,9 +3,9 @@ import AutoPlay from './plugins/AutoPlay.ts';
 import AutoPause from './plugins/AutoPause.ts';
 
 //mdn html media element para ver props, metodos de los medios
-const video = document.querySelector("video");
-const btn_play = document.querySelector("#btn_play");
-const btn_mute = document.querySelector("#btn_mute");
+const video:HTMLMediaElement = document.querySelector("video");
+const btn_play:HTMLElement = document.querySelector("#btn_play");
+const btn_mute:HTMLElement  = document.querySelector("#btn_mute");
 
 
 //instancio un objeto para llamar luego los metodos
