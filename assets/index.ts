@@ -1,6 +1,7 @@
 import MediaPlayer from './MediaPlayer';
 import AutoPlay from './plugins/AutoPlay';
 import AutoPause from './plugins/AutoPause';
+import Ads from './plugins/Ads';
 
 //mdn html media element para ver props, metodos de los medios
 const video = document.querySelector("video");
@@ -14,6 +15,7 @@ const player = new MediaPlayer({
     plugins: [
         new AutoPlay(),
         new AutoPause(),
+        new Ads()
     ],
 });//obliga a pasar un objeto de config y plugins
 btn_play.onclick = () => player.togglePlay();
